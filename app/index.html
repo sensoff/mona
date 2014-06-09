@@ -21,37 +21,29 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Modernizr</li>
-            <li>RequireJS</li>
-          </ul>
+        <div class="i-layout">
+            <header>
+                <div class="b-header">header</div>
+            </header>
+            <section id="slider">
+                <div class="b-slider">slider</div>
+            </section>
+            <section id="main-news">
+                <div class="b-main-news">main news</div>
+            </section>
+            <section id="catalog">
+                <div class="b-catalog">
+                    catalog
+                </div>
+            </section>
+            <section id="main-comments">
+                <div class="b-main-comments">
+                    comments
+                </div>
+            </section>
         </div>
-
-
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
+        <footer>
+            <div class="b-footer">footer</div>
+        </footer>
 </body>
 </html>

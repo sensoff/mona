@@ -34,6 +34,10 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
             },
+            less: {
+                files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+                tasks: ['less:server', 'autoprefixer']
+            },
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
                 tasks: ['copy:styles', 'autoprefixer']
@@ -157,6 +161,33 @@ module.exports = function (grunt) {
                 options: {
                     debugInfo: true
                 }
+            }
+        },
+        // Compiles Sass to CSS and generates necessary files if requested
+        less: {
+            options: {
+                // Works?
+                paths: [
+                    'node_modules'
+                ]
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles',
+                    src: ['*.less'],
+                    dest: '.tmp/styles',
+                    ext: '.css'
+                }]
+            },
+            server: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/styles',
+                    src: ['*.less'],
+                    dest: '.tmp/styles',
+                    ext: '.css'
+                }]
             }
         },
         autoprefixer: {
@@ -314,6 +345,7 @@ module.exports = function (grunt) {
         },
         concurrent: {
             server: [
+                'less:server',
                 'compass',
                 'coffee:dist',
                 'copy:styles'

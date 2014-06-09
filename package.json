@@ -1,7 +1,9 @@
 {
   "name": "mona",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "autoprefixer": "^1.1.20140605"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.2.0",
