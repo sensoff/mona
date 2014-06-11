@@ -1,5 +1,48 @@
 .b-main-comments {
-  margin: 0 auto;
-  padding-bottom: @footer_height;
+  margin: 10px auto;
+  padding-bottom: @footer_height + 10px;
   width: @page_width;
+  h2 {
+    color: #1bb31b;
+    font-family: 'AFuturicaLtThin', sans-serif;
+    font-size: 48px;
+    text-align: center;
+  }
+  .header {
+    background: @green1;
+    color: #FFFFFF;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+    padding: 0 20px;
+    h3 {
+      font-size: 24px;
+      font-family: 'AFuturicaLtSemiBold', sans-serif;
+      float: left;
+    }
+    menu {
+      float: right;
+      item {
+        a {
+          color: #FFFFFF;
+          font-size: 18px;
+          font-family: 'AFuturicaLtSemiBold', sans-serif;
+          &:hover {
+            text-decoration: none;
+          }
+          &.write-comment {
+            background: url(../images/comment-write.png) no-repeat;
+            background-position: left center;
+            padding-left: 38px;
+            margin-right: 20px;
+          }
+          &.read-comments {
+            background: url(../images/comment-read.png) no-repeat;
+            background-position: left center;
+            padding-left: 35px;
+          }
+        }
+      }
+    }
+  }
 }
