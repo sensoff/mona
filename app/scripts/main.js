@@ -29,7 +29,6 @@
   require(['backbone', 'app'], function(Backbone, app) {
     Backbone.history.start();
     _.extend({}, Backbone.Events);
-    console.log(app)
   });
 
 })();

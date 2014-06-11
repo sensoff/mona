@@ -1,7 +1,9 @@
 define([
-  'backbone'
+  'backbone',
+  'mainpage'
   ], function(
-    Backbone
+    Backbone,
+    mainpageModule
   ) {
 
   var App = Backbone.Router.extend({
