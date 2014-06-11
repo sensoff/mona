@@ -1,12 +1,35 @@
-require.config({
+(function() {
+  require.config({
     paths: {
-        jquery: '../bower_components/jquery/jquery'
+      backbone: '../bower_components/backbone/backbone',
+      'backbone-validation': '../bower_components/backbone-validation/backbone-validation',
+      fotorama: '../bower_components/fotorama/fotorama',
+      jquery: '../bower_components/jquery/jquery',
+      underscore: '../bower_components/underscore/underscore',
+    },
+    shim: {
+      underscore: {
+        exports: '_'
+      },
+      backbone: {
+        deps: ['underscore', 'jquery'],
+        exports: 'Backbone'
+      },
+      'backbone-validation': {
+        deps: ['underscore', 'jquery', 'backbone'],
+        exports: 'validation'
+      },
+      fotorama: {
+        deps: ['jquery'],
+        exports: 'fotorama'
+      }
     }
-});
+  });
 
-require(['app', 'jquery'], function (app, $) {
-    'use strict';
-    // use app here
-    console.log(app);
-    console.log('Running jQuery %s', $().jquery);
-});
+  require(['backbone', 'app'], function(Backbone, app) {
+    Backbone.history.start();
+    _.extend({}, Backbone.Events);
+    console.log(app)
+  });
+
+})();

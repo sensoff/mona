@@ -1,6 +1,13 @@
-/*global define */
-define([], function () {
-    'use strict';
+define([
+  'backbone'
+  ], function(
+    Backbone
+  ) {
 
-    return '\'Allo \'Allo!';
+  var App = Backbone.Router.extend({
+
+  });
+
+  return new App;
+
 });
