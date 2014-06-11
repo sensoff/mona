@@ -1,4 +1,59 @@
 .b-main-news {
-  margin: 0 auto;
+  background: @green1;
+  color: #FFFFFF;
+  margin: 20px auto 0;
   width: @page_width;
+  .left {
+    box-sizing: border-box;
+    float: left;
+    font-family: 'AFuturicaLtSemiBold', sans-serif;
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+    width: 70px;
+  }
+  .right {
+    border-left: 4px solid #18a118;
+    box-sizing: border-box;
+    float: right;
+    padding: 10px;
+    position: relative;
+    width: 890px;
+    .close {
+      background-color: rgba(56, 136, 46, 0);
+      background-image: url(../images/main-news-close-ico.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 70%;
+      border-radius: 30px;
+      cursor: pointer;
+      height: 30px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      transition: all 0.3s ease-in-out;
+      width: 30px;
+      &:hover {
+        background-color: rgba(56, 136, 46, 1);
+        background-size: 40%;
+      }
+    }
+    article {
+      font-family: 'AFuturicaBook', sans-serif;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .all-news {
+      background: url(../images/main-news-ico.png) no-repeat;
+      background-position: left center;
+      color: #fff;
+      font-family: 'AFuturicaLtSemiBold', sans-serif;
+      font-size: 18px;
+      padding-left: 27px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .clearfix();
 }
