@@ -1,4 +1,100 @@
 .b-catalog {
-  margin: 0 auto;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border: 1px solid #e2e2e2;
+  margin: 20px auto 0;
   width: @page_width;
+  menu {
+    height: 60px;
+    item {
+      background-color: #4fbf42;
+      float: left;
+      padding-top: 6px;
+      width: 320px;
+      &:first-child {
+        background: @green1;
+        width: 319px;
+      }
+      &:last-child {
+        background: #60d454;
+        width: 319px;
+      }
+      a {
+        background-color: rgba(255, 255, 255, 0);
+        color: #0f0f64;
+        float: left;
+        font-size: 24px;
+        font-family: 'AFuturicaLtSemiBold', sans-serif;
+        height: 54px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease-in-out;
+        width: 100%;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        &.active {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+  .description {
+    color: #4fbf42;
+    font-size: 14px;
+    font-family: 'AFuturicaLtSemiBold', sans-serif;
+    height: 65px;
+    line-height: 65px;
+    margin-top: 20px;
+    .time {
+      background-image: url(../images/catalog-time-ico.png);
+      background-repeat: no-repeat;
+      background-position: 20px center;
+      box-sizing: border-box;
+      float: left;
+      padding-left: 100px;
+      width: 320px;
+      span {
+        font-size: 30px;
+      }
+    }
+    .price {
+      background-image: url(../images/catalog-price-ico.png);
+      background-repeat: no-repeat;
+      background-position: 20px center;
+      box-sizing: border-box;
+      float: left;
+      padding-left: 80px;
+      width: 320px;
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+  .gallery {
+    margin-top: 15px;
+    padding: 0 22px 10px;
+    a {
+      border: 1px solid #dcdcdc;
+      height: 140px;
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      outline: 2px solid transparent;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      width: 215px;
+      &:nth-child(4n) {
+        margin-right: 0px;
+      }
+      &:hover {
+        border: 1px solid @green1;
+        outline: 2px solid @green1;
+      }
+    }
+    .clearfix();
+  }
 }
+
