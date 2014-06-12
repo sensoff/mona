@@ -21,32 +21,28 @@ input[type="text"].error {
 }
 
 textarea {
-  background: #FFFFFF url('../images/input_bg.png') repeat-x;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 0px;
-  color: #646464;
-  float: left;
-  font-size: 18px;
-  font-family: Verdana, Arial;
-  height: 135px;
+  box-sizing: border-box;
+  color: #000000;
+  font-size: 16px;
+  font-family: sans-serif;
+  height: 145px;
+  letter-spacing: 0.03em;
+  line-height: 28px;
+  padding: 10px 30px 10px 10px;
   resize: none;
-  text-indent: 10px;
-  transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -webkit-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-  width: 533px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
 textarea:focus {
-
+  background: #e1fcde;
+  border: none;
 }
 textarea.error {
-  border: 1px solid #e0144a;
-}
-textarea.ok {
-  border: 1px solid #41d108;
+  background: #f7782a;
+  color: #FFFFFF;
 }
 
 button {
