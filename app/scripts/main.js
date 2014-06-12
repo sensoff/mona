@@ -2,7 +2,7 @@
   require.config({
     paths: {
       backbone: '../bower_components/backbone/backbone',
-      'backbone-validation': '../bower_components/backbone-validation/backbone-validation',
+      'backbone-validation': '../bower_components/backbone-validation/dist/backbone-validation',
       fotorama: '../bower_components/fotorama/fotorama',
       jquery: '../bower_components/jquery/jquery',
       underscore: '../bower_components/underscore/underscore',

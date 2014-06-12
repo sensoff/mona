@@ -1,9 +1,10 @@
 define([
     'backbone',
-    'mainpage',
-    'views/main-news'
+    'models/options',
+    'mainpage'
     ], function(
         Backbone,
+        optionsModel,
         mainpageModule
     ) {
 
@@ -18,7 +19,7 @@ define([
         },
 
         initialize: function() {
-            console.log('init');
+            this.params = new optionsModel;
         },
 
         index: function() {
@@ -26,7 +27,11 @@ define([
         },
 
         order: function(price, img) {
-            console.log(price + ' ' + img)
+            if (price && img) {
+              console.log('with price');
+            } else {
+              console.log('without price');
+            }
             console.log('add order');
         },
 
