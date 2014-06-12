@@ -18,7 +18,7 @@
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
         <!-- endbuild -->
     </head>
-    <body style="overflow: hidden;">
+    <body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -32,7 +32,7 @@
                     </div>
                     <div class="right">
                         <div class="order">
-                            <a href="#order">
+                            <a href="#add_order">
                                 заказать звонок
                             </a>
                         </div>
@@ -90,10 +90,10 @@
                         data-arrows="true"
                         data-click="true"
                         data-swipe="true">
-                        <img src="images/slider/1.jpg" data-caption="~ 650$<a href='#' class='slider-order'>Заказать похожий</a>" />
-                        <img src="images/slider/2.jpg" data-caption="~ 1650$<a href='#' class='slider-order'>Заказать похожий</a>" />
-                        <img src="images/slider/3.jpg" data-caption="~ 150$<a href='#' class='slider-order'>Заказать похожий</a>" />
-                        <img src="images/slider/4.jpg" data-caption="~ 499$<a href='#' class='slider-order'>Заказать похожий</a>" />
+                        <img src="images/slider/1.jpg" data-caption="~ 650$<a href='#add_order/650/1.jpg' class='slider-order'>Заказать похожий</a>" />
+                        <img src="images/slider/2.jpg" data-caption="~ 1650$<a href='#add_order/1650/2.jpg' class='slider-order'>Заказать похожий</a>" />
+                        <img src="images/slider/3.jpg" data-caption="~ 150$<a href='#add_order/150/3.jpg' class='slider-order'>Заказать похожий</a>" />
+                        <img src="images/slider/4.jpg" data-caption="~ 499$<a href='#add_order/499/4.jpg' class='slider-order'>Заказать похожий</a>" />
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -107,7 +107,7 @@
                             Акция: “В добрые руки”, скидка молодым семьям с детьми - 15%! <br />
                             Время действия - март 2014 года.
                         </article>
-                        <a href="#" class="all-news">
+                        <a href="/news" class="all-news">
                             Читать все новости
                         </a>
                     </div>
@@ -117,9 +117,9 @@
             <section id="catalog">
                 <div class="b-catalog">
                     <menu>
-                        <item><a class="active" href="#">Кухни</a></item>
-                        <item><a href="#">Шкафы-купе</a></item>
-                        <item><a href="#">Кухни</a></item>
+                        <item><a class="active" href="#catalog/kitchens">Кухни</a></item>
+                        <item><a href="#catalog/wardrobes">Шкафы-купе</a></item>
+                        <item><a href="#catalog/cabinets">Горки</a></item>
                     </menu>
                     <div class="description">
                         <div class="time">
@@ -130,14 +130,14 @@
                         </div>
                     </div>
                     <div class="gallery">
-                        <a href="#"><img src="images/catalog/1.jpg" alt="" /></a>
-                        <a href="#"><img src="images/catalog/2.jpg" alt="" /></a>
-                        <a href="#"><img src="images/catalog/3.jpg" alt="" /></a>
-                        <a href="#"><img src="images/catalog/4.jpg" alt="" /></a>
-                        <a href="#"><img src="images/catalog/1.jpg" alt="" /></a>
-                        <a href="#"><img src="images/catalog/2.jpg" alt="" /></a>
-                        <a href="#"><img src="images/catalog/3.jpg" alt="" /></a>
-                        <a href="#"><img src="images/catalog/4.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/1"><img src="images/catalog/1.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/2"><img src="images/catalog/2.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/3"><img src="images/catalog/3.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/4"><img src="images/catalog/4.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/5"><img src="images/catalog/1.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/6"><img src="images/catalog/2.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/7"><img src="images/catalog/3.jpg" alt="" /></a>
+                        <a href="#catalog/kitchens/8"><img src="images/catalog/4.jpg" alt="" /></a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -148,8 +148,8 @@
                     <div class="header">
                         <h3>Отзывы</h3>
                         <menu>
-                            <item><a class="write-comment" href="#">Оставить отзыв</a></item>
-                            <item><a class="read-comments" href="#">Читать все отзывы</a></item>
+                            <item><a class="write-comment" href="#add_comment">Оставить отзыв</a></item>
+                            <item><a class="read-comments" href="/comments">Читать все отзывы</a></item>
                         </menu>
                     </div>
                     <div class="comments">
