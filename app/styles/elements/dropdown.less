@@ -1,0 +1,31 @@
+@dropdown_height: 40px;
+.e-dropdown {
+  color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'AFuturicaLtThin', sans-serif;
+  .show {
+    background-color: #FFFFFF;
+    background-image: url(../images/dropdown-ico.png);
+    background-repeat: no-repeat;
+    background-position: 42px center;
+    height: @dropdown_height;
+    line-height: @dropdown_height;
+    position: relative;
+    text-indent: 10px;
+    .list {
+      background: #FFFFFF;
+      display: none;
+      position: absolute;
+      width: 100%;
+      &.open {
+        display: block;
+      }
+      .e-dropdown__line {
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+}

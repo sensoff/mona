@@ -15,7 +15,7 @@
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
-        <script data-main="scripts/main.js" src="bower_components/requirejs/require.js"></script>
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
         <!-- endbuild -->
     </head>
     <body>
@@ -44,6 +44,37 @@
                         </div>
                         <div class="number">
                             +375 29 600 00 00
+                        </div>
+                        <div class="form-container">
+                            <div class="b-order-form">
+                                <div class="line">
+                                    <div class="label">Ваше имя:</div>
+                                    <input class="name" type="text" name="name" value="антон"/>
+                                    <div class="errors">
+                                        Имя не может быть пустым
+                                    </div>
+                                </div>
+                                <div class="line">
+                                    <div class="label">Ваш номер телефона :</div>
+                                    <div class="e-dropdown">
+                                        <input type="hidden" name="pre-phone" />
+                                        <div class="show">
+                                            29
+                                            <div class="list">
+                                                <div class="e-dropdown__line">25</div>
+                                                <div class="e-dropdown__line">33</div>
+                                                <div class="e-dropdown__line">44</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input class="phone error" type="text" name="phone" value="55"/>
+                                    <div class="errors">После префикса должно быть 7 цифр </div>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#">Я передумал(а)</a>
+                                    <button>Готово!</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>

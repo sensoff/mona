@@ -1,0 +1,65 @@
+.b-order-form {
+  background: rgba(30, 136, 30, 0.9);
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: 'AFuturicaLtThin', sans-serif;
+  position: absolute;
+  right: 0px;
+  padding: 20px;
+  width: 500px;
+  z-index: 1;
+  .line {
+    float: left;
+    line-height: 40px;
+    margin-bottom: 10px;
+    width: 360px;
+    .label {
+      float: left;
+    }
+    .e-dropdown {
+      float: left;
+      margin-left: 10px;
+      width: 65px;
+    }
+    input.name {
+      float: right;
+      width: 270px;
+    }
+    input.phone {
+      float: right;
+      width: 100px;
+    }
+    .errors {
+      color: #f7782a;
+      font-family: 'AFuturicaLtSemiBold';
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+  .buttons {
+    float: right;
+    margin-top: 10px;
+    width: 275px;
+    a {
+      color: #FFFFFF;
+      line-height: 40px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    button {
+      background: @green1;
+      color: #FFFFFF;
+      float: right;
+      font-family: 'AFuturicaLtSemiBold';
+      font-size: 18px;
+      line-height: 40px;
+      transition: background 0.3s ease-in-out;
+      width: 150px;
+      &:hover {
+        background: #000000;
+      }
+    }
+  }
+}
