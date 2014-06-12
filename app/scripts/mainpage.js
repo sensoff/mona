@@ -1,5 +1,5 @@
 (function(){
-    define(['fotorama'], function(fotorama) {
-
+    define(['fotorama', 'views/main-news'], function(fotorama, MainNews) {
+        new MainNews;
     });
 })()

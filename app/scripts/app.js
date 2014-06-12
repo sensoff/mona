@@ -1,6 +1,7 @@
 define([
     'backbone',
-    'mainpage'
+    'mainpage',
+    'views/main-news'
     ], function(
         Backbone,
         mainpageModule
