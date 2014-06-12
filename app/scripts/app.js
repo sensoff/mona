@@ -1,10 +1,14 @@
 define([
+    'jquery',
     'backbone',
     'models/options',
+    'views/order',
     'mainpage'
     ], function(
+        $,
         Backbone,
         optionsModel,
+        orderView,
         mainpageModule
     ) {
 
@@ -28,11 +32,23 @@ define([
 
         order: function(price, img) {
             if (price && img) {
-              console.log('with price');
+                var options = {price: price, img: img};
             } else {
-              console.log('without price');
+                var options = undefined;
             }
-            console.log('add order');
+            if (this.params.get('order') === null) {
+                this.params.set({order: new orderView({params: this.params})});
+                $('[data-order-container]').append(this.params.get('order').render(options));
+            }
+            var order = this.params.get('order');
+            if (options) {
+                order.model.set({similar: true, img: options.img, price: options.price});
+            } else {
+                order.model.set({similar: false, img: undefined, price: undefined});
+            }
+            if (order.model.get('open') === false) {
+                order.model.set({open: true});
+            }
         },
 
         comment: function() {
