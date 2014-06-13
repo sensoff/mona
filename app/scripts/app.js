@@ -2,15 +2,17 @@ define([
     'jquery',
     'backbone',
     'models/options',
-    'views/order',
+    'views/catalog',
     'views/comment',
+    'views/order',
     'mainpage'
     ], function(
         $,
         Backbone,
         optionsModel,
-        orderView,
+        catalogView,
         commentView,
+        orderView,
         mainpageModule
     ) {
 
@@ -29,6 +31,7 @@ define([
         },
 
         index: function() {
+            this.catalog();
             console.log('index');
         },
 
@@ -64,7 +67,12 @@ define([
         },
 
         catalog: function(name) {
-            console.log('catalog ' + name);
+            if ($('#catalog') && this.params.get('catalog') === null ) {
+                this.params.set({catalog: new catalogView({params: this.params, app: this})});
+            }
+            if (name) {
+                this.params.get('catalog').selectCatalog(name);
+            }
         },
 
         gallery: function(name, id) {

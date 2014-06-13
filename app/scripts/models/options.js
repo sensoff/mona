@@ -7,7 +7,8 @@ define([
         defaults: {
             order: null,
             gallery: null,
-            comment: null
+            comment: null,
+            catalog: null
         }
     });
 
