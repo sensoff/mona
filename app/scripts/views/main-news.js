@@ -10,7 +10,7 @@ define([
       },
 
       close: function() {
-          this.$el.slideUp("slow");
+          this.$el.slideUp("fast");
       }
 
   });

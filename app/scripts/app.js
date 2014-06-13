@@ -3,12 +3,14 @@ define([
     'backbone',
     'models/options',
     'views/order',
+    'views/comment',
     'mainpage'
     ], function(
         $,
         Backbone,
         optionsModel,
         orderView,
+        commentView,
         mainpageModule
     ) {
 
@@ -52,7 +54,13 @@ define([
         },
 
         comment: function() {
-            console.log('add comment');
+            if (this.params.get('comment') === null) {
+                this.params.set({comment: new commentView({params: this.params, app: this})});
+                $('body').append(this.params.get('comment').render());
+            }
+            if (this.params.get('comment').model.get('open') === false) {
+                this.params.get('comment').model.set({open: true});
+            }
         },
 
         catalog: function(name) {

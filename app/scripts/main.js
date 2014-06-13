@@ -6,6 +6,7 @@
       fotorama: '../bower_components/fotorama/fotorama',
       jquery: '../bower_components/jquery/jquery',
       underscore: '../bower_components/underscore/underscore',
+      rating: 'rating'
     },
     shim: {
       underscore: {
@@ -22,6 +23,10 @@
       fotorama: {
         deps: ['jquery'],
         exports: 'fotorama'
+      },
+      rating: {
+        deps: ['jquery'],
+        exports: 'rating'
       }
     }
   });

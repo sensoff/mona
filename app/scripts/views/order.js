@@ -61,7 +61,7 @@ define([
       },
 
       initialize: function(options) {
-          this.model = new OrderModel();
+          this.model = new OrderModel;
           this.params = options.params;
           this.start_validation = false;
           Backbone.Validation.bind(this);
@@ -71,7 +71,6 @@ define([
       },
 
       render: function(options) {
-          console.log(options)
           this.$el.append(_.template(order_template, {data: this.model.toJSON(), options: options}));
           var dropDown = new DropDownView(this.model);
           var values = [29, 33, 44, 25];
@@ -109,8 +108,6 @@ define([
               this.start_validation = true;
           }
           this.setOrder();
-          console.log(this.model.validationError);
-          console.log(this.model.toJSON());
           if (!this.model.validationError) {
               var _this = this;
               jQuery.ajax({

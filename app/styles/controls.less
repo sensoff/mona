@@ -9,17 +9,16 @@ input[type="text"] {
   padding: 0px;
   text-indent: 10px;
   transition: all 0.3s ease-in-out;
+  &:focus {
+    background: #e1fcde;
+    border: none;
+    outline: none;
+  }
+  &.error {
+    background: #f7782a;
+    color: #FFFFFF;
+  }
 }
-
-input[type="text"]:focus {
-  background: #e1fcde;
-  border: none;
-}
-input[type="text"].error {
-  background: #f7782a;
-  color: #FFFFFF;
-}
-
 textarea {
   border: none;
   border-radius: 0px;
@@ -34,19 +33,23 @@ textarea {
   resize: none;
   transition: all 0.3s ease-in-out;
   width: 100%;
-}
-
-textarea:focus {
-  background: #e1fcde;
-  border: none;
-}
-textarea.error {
-  background: #f7782a;
-  color: #FFFFFF;
+  &:focus {
+    background: #e1fcde;
+    border: none;
+    outline: none;
+  }
+  &.error {
+    background: #f7782a;
+    color: #FFFFFF;
+  }
 }
 
 button {
   border: none;
   cursor: pointer;
   padding: 0;
+  &:focus {
+    outline: none;
+  }
 }
+
