@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Настройки</title>
+	<link rel="stylesheet" href="../css/sources/common/reset.css" type="text/css" media="screen, projection" />
+	
+	<link rel="stylesheet" href="../css/sources/content/blocks.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/content/breadcrumbs.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/content/pager.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/content/product_about.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/content/stat.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/content/tables.css" type="text/css" media="screen, projection" />
+	
+	<link rel="stylesheet" href="../css/sources/controls/ballons.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/controls/buttons.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/controls/forms.css" type="text/css" media="screen, projection" />
+	
+	
+	<link rel="stylesheet" href="../css/sources/layouts/common.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/layouts/footer.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/layouts/header.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/layouts/left_sidebar.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/layouts/modal.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../css/sources/layouts/top_menu.css" type="text/css" media="screen, projection" />
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script type="text/javascript" defer src="../js/select_language.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<div class="left_sidebar">
+			<div class="logo">
+				<img alt="" src="../images/logo.png" />
+			</div>
+		</div>
+		<div class="center">
+			<div class="conteiner">
+				<div id="top_menu">
+					<ul>
+						<li class="comments block btn" title="Комментарии"><a href="#"><span class="ico"></span><span class="name">Комментарии</span></a>
+						<li class="catalog block btn" title="Каталог"><a href="#"><span class="ico"></span><span class="name">Каталог</span></a>
+						<li class="news block btn" title="Новости"><a href="#"><span class="ico"></span><span class="name">Новости</span></a>
+						<li class="articles block btn" title="Статьи"><a href="#"><span class="ico"></span><span class="name">Статьи</span></a>
+						<li class="active settings block btn" title="Настройки"><a href="#"><span class="ico"></span><span class="name">Настройки</span></a>
+						<li class="logout block btn" title="log out"><a href="#"><span class="ico"></span><span class="name">Выход</span></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="content">
+		<div class="conteiner">
+			<div class="left_sidebar">
+				<div class="page_title">
+					Настройки
+				</div>
+			</div>
+			<div class="center">
+				
+			</div>
+		</div>
+		<div class="conteiner">
+			<div class="left_sidebar">
+				<div class="conteiner">
+					<div class="stat">
+						<a href="/wot-gifs.ru/admin/index.php?r=gifs/gifs/index" class="line block2 btn ">
+							<span class="name">
+								Все Gif-анимации:
+							</span>
+							<span class="value">
+								144						</span>
+						</a>
+						<a href="/wot-gifs.ru/admin/index.php?r=gifs/gifs/index&amp;approved=1" class="line block2 btn  ">
+							<span class="name">
+								Проверенные Gif-анимации
+							</span>
+							<span class="value">
+								141						</span>
+						</a>
+						<a href="/wot-gifs.ru/admin/index.php?r=gifs/gifs/index&amp;approved=0" class="line block2 btn active">
+							<span class="name">
+								Не проверенные Gif-анимации:
+							</span>
+							<span class="value">
+								3						</span>
+						</a>
+						<a href="/wot-gifs.ru/admin/index.php?r=gifs/gifs/index&amp;approved=1&amp;approved_vk=0" class="line block2 btn ">
+							<span class="name">
+								Не опубликованные в группе:
+							</span>
+							<span class="value">
+								136						</span>
+						</a>
+						
+					</div>
+				</div>
+				
+				<div class="conteiner">
+					<div class="stat language">
+						<div class="line block2 btn active rus" atr="rus">
+							<span class="image">
+								<img src="../images/language/russia.png" />
+							</span>
+							<span class="value">
+								Русский
+							</span>
+						</div>
+						
+						<div class="line block2 btn uk" atr="uk">
+							<span class="image">
+								<img src="../images/language/uk.png" />
+							</span>
+							<span class="value">
+								Английский
+							</span>
+						</div>
+						
+						<div class="line block2 btn bel" atr="bel">
+							<span class="image">
+								<img src="../images/language/belarus.png" />
+							</span>
+							<span class="value">
+								Беларуский
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="center">
+				<div class="conteiner">
+					<div class="conteiner tactions block8 form_title">
+							Общие параметры
+					</div>
+					<div class="conteiner tactions block8">
+						<div class="preform">
+							Поля отмеченные <span class="form_title_marker">*</span> обязательны для заполнения
+						</div>
+					</div>
+					<div class="table block8 prosmotr">
+						<div class="tbody">
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Позиция:<sup class="form_title_marker">*</sup></span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="text" placeholder="Позиция в списке мастеров" required="required"/>
+											<span class="error">
+												Ошибка оишиа вп авп авп вап ва пвап 
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Отображать на сайте:</span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input type="checkbox"/>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Фото мастера:</span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="file" required="required"/>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- conteiner main -->
+				
+				<div class="conteiner tactions block8 form_title asbutton rus active" atr="rus">
+						<span class="image"><img src="../images/language/russia.png" /></span>
+						Параметры на русском языке
+				</div>
+				
+				<div class="conteiner" id="rus">
+
+					<div class="table block8 prosmotr">
+						
+						<div class="tbody">
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Имя мастера: <span class="form_title_marker">*</span></span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="text" placeholder="Имя мастера" required="required"/>
+											<span class="error">
+												Ошибка оишиа вп авп авп вап ва пвап 
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Об авторе:</span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											вставь редактор
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+							
+					</div>
+				
+					<div class="conteiner tactions block8 form_title">
+							Параметры для CEO на русском языке
+					</div>
+					<div class="table block8 prosmotr">
+						
+						<div class="tbody">
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Page title: </span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="text" placeholder="Заголовок страницы в браузере" />
+											<span class="error">
+												Ошибка оишиа вп авп авп вап ва пвап 
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="block2" class="cell_name">Description: </span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<textarea class="block3" placeholder="Описание страницы"></textarea>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+							
+					</div>
+				</div><!-- conteiner rus -->
+				
+
+				<div class="conteiner tactions block8 form_title asbutton uk" atr="uk">
+						<span class="image"><img src="../images/language/uk.png" /></span>
+						Параметры на английском
+				</div>
+				
+				<div class="conteiner" id="uk" style="display: none;">
+					<div class="table block8 prosmotr">
+						
+						<div class="tbody">
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Имя мастера:</span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="text" placeholder="Имя мастера" required="required"/>
+											<span class="error">
+												Ошибка оишиа вп авп авп вап ва пвап 
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Об авторе:</span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											вставь редактор
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+							
+					</div>
+				
+					<div class="conteiner tactions block8 form_title">
+						Параметры для CEO на английском языке
+					</div>
+					
+					<div class="table block8 prosmotr">
+						
+						<div class="tbody">
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Page title: </span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="text" placeholder="Заголовок страницы в браузере" />
+											<span class="error">
+												Ошибка оишиа вп авп авп вап ва пвап 
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="block2" class="cell_name">Description: </span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<textarea class="block3" placeholder="Описание страницы"></textarea>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+							
+					</div>
+				</div><!-- conteiner uk -->
+
+
+
+				<div class="conteiner tactions block8 form_title asbutton bel" atr="bel">
+					<span class="image"><img src="../images/language/belarus.png" /></span>
+					Параметры на беларуском языке
+				</div>
+				
+				<div class="conteiner" id="bel" style="display: none;">
+					<div class="table block8 prosmotr">
+						
+						<div class="tbody">
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Имя мастера:</span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="text" placeholder="Имя мастера" required="required"/>
+											<span class="error">
+												Ошибка оишиа вп авп авп вап ва пвап 
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Об авторе:</span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											вставь редактор
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+							
+					</div>
+				
+					<div class="conteiner tactions block8 form_title">
+							Параметры для CEO на беларуском языке
+					</div>
+					<div class="table block8 prosmotr">
+						
+						<div class="tbody">
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="cell_name">Page title: </span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<input class="block2" type="text" placeholder="Заголовок страницы в браузере" />
+											<span class="error">
+												Ошибка оишиа вп авп авп вап ва пвап 
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="tablecell cell2">
+									<div class="tcontent">
+										<span class="block2" class="cell_name">Description: </span>
+									</div>
+								</div>
+								<div class="tablecell cell6">
+									<div class="tcontent">
+										<span class="cell_value">
+											<textarea class="block3" placeholder="Описание страницы"></textarea>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+							
+					</div>
+				</div><!-- conteiner uk -->
+
+
+	
+				<div class="tactions block8">
+					<button class="block2 btn ok"><span>Сохранить</span></button>
+				</div>
+			
+			</div><!-- center -->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+ 

@@ -8,7 +8,8 @@ define([
             order: null,
             gallery: null,
             comment: null,
-            catalog: null
+            catalog: null,
+            news: null
         }
     });
 

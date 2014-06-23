@@ -1,0 +1,23 @@
+.breadcrumbs{
+	float: left;
+	height: 80px;
+	}
+	.breadcrumbs a{
+		background: url('../../../images/bullet.png') left center no-repeat;
+		color: silver;
+		display: table-cell;
+		height: 80px;
+		padding: 0 10px 0 15px;
+		text-decoration: none;
+		vertical-align: middle;
+		}
+		.breadcrumbs a:hover{
+			text-decoration: underline;
+		}
+		.breadcrumbs a:first-child{
+			background: inherit;
+			padding-left: 10px; 
+		}
+		.breadcrumbs a:last-child{
+			color: #565656;
+		}

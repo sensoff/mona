@@ -24,7 +24,7 @@ define([
           <div class="similar">\
             Я хочу заказать похожее \
             <div class="similar-image">\
-              <img src="images/slider/<%= options.img %>" />\
+              <img src="images/gallery/<%= options.img %>" />\
               <div class="price">~ <%= options.price %> $</div>\
             </div>\
           </div>\
@@ -43,7 +43,7 @@ define([
           <div class="similar">\
               Я хочу заказать похожее \
               <div class="similar-image">\
-                <img src="images/slider/<%= options.img %>" />\
+                <img src="images/gallery/<%= options.img %>" />\
                 <div class="price">~ <%= options.price %> $</div>\
               </div>\
           </div>\
@@ -82,6 +82,7 @@ define([
           if (this.model.get('similar')) {
               var options = {img: this.model.get('img'), price: this.model.get('price')};
               this.$('[data-similar]').empty().append(_.template(similar_template, {options: options}));
+              $('body').animate({scrollTop: 0}, 300);
           } else {
               this.$('[data-similar]').empty();
           }
@@ -89,6 +90,8 @@ define([
       },
 
       toggleOpen: function() {
+          console.log(1)
+
           this.$('.b-order-form').slideToggle("fast");
       },
 

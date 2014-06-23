@@ -1,0 +1,21 @@
+@import url("non-auth.css") screen;
+
+@import url("sources/common/reset.css") screen;
+
+@import url("sources/content/blocks.css") screen;
+@import url("sources/content/breadcrumbs.css") screen;
+@import url("sources/content/stat.css") screen;
+@import url("sources/content/tables.css") screen;
+@import url("sources/content/product_about.css") screen;
+@import url("sources/content/pager.css") screen;
+
+@import url("sources/controls/ballons.css") screen;
+@import url("sources/controls/buttons.css") screen;
+@import url("sources/controls/forms.css") screen;
+
+@import url("sources/layouts/common.css") screen;
+@import url("sources/layouts/footer.css") screen;
+@import url("sources/layouts/header.css") screen;
+@import url("sources/layouts/left_sidebar.css") screen;
+@import url("sources/layouts/top_menu.css") screen;
+@import url("sources/layouts/modal.css") screen;

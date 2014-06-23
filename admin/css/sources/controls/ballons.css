@@ -1,0 +1,31 @@
+.flash{
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+		-o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+		-ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	float: left;
+	height: 90px;
+	margin-left: 10px;
+	margin-top: 10px;
+	text-align: center;
+}
+.flash.ok{
+	background: lime;
+}
+.flash.error{
+	background: red;
+}
+.flash.warning{
+	background: orange;
+}
+.flash .text{
+	display: table-cell;
+	font-size: 30px; 
+	height: 90px;
+	line-height: 45px;
+	padding-left: 10px;
+	vertical-align: middle;
+	width: 100%;
+}

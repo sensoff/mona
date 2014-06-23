@@ -1,0 +1,128 @@
+
+@import url("sources/common/reset.css") screen;
+@import url("sources/layouts/footer.css") screen;
+@import url("sources/layouts/modal.css") screen;
+
+body{
+    font: normal 16px/22px 'Play', Tahoma, Verdana, Arial, sans-serif;
+    color: #231f20;
+	display: block;
+	overflow: hidden;
+	height:100%;
+	}
+#body2{
+  	background: #fff url('../../images/m_bg.png');
+		display: block;
+		height: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		top: 0;
+		right: 0;
+		overflow: auto;
+		z-index: 100;
+		}
+#wrapper{
+	display: block;
+	height: auto !important;
+	min-height: 100%;
+	margin: 0px auto;
+    min-width: 480px;
+	max-width: 800px;
+	}
+	#content {
+		line-height: 1;
+		width: 100%;
+		}
+		#content:after {
+			content: '.';
+			clear: both;
+			display: block;
+			height: 0;
+			padding: 0 0 100px;
+			visibility: hidden;
+			}
+
+.conteiner{
+	float: left;
+	width:100%;
+}
+
+.m .form{
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 250px;
+	}
+	.m .form:after{
+		content: '.';
+		clear: both;
+		display: block;
+		height: 0;
+	}
+	.m .form .line{
+		float: left;
+		margin-bottom: 10px;
+		width: 100%;
+		}
+		.m .form .line .label{
+			color: #646464;
+			float: left;
+			margin: 0px 0 5px;
+			width: 100%;
+		}
+		.m .form .line .input{
+			float: left;
+			width: 100%;
+		}
+		.m .form .line .input input{
+			background: #c9c9c9;
+			border: 2px solid #565656;
+			color: #000;
+			font: 14px/20px Tahoma, Arial;
+			height: 20px;
+			width: 200px;
+		}
+		.m .form .line label{
+			color: #646464;
+		}
+
+		.m .form .line button{
+			cursor: pointer;
+			height: 25px;
+		}
+
+@media screen  and (max-width: 799px){
+	#wrapper{
+		width: 640px;
+	}
+	.left_sidebar{
+		width: 635px;
+	}
+	.center{
+		width: 635px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px){
+	#wrapper{
+		width: 800px;
+	}
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1255px){
+	#wrapper{
+		width: 1000px;
+	}
+}
+
+@media screen and (min-width: 1256px) and (max-width: 1339px){
+	#wrapper{
+		width: 1255px;
+	}
+}
+
+@media screen and (min-width: 1340px){
+	#wrapper{
+		width: 1340px;
+	}
+}

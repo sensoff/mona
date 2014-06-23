@@ -1,0 +1,87 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'backbone-sync',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose node symlink /usr/bin/node
+5 warn package.json mona@0.0.0 No description
+6 warn package.json mona@0.0.0 No repository field.
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'backbone-sync', null ]
+9 verbose cache add name=undefined spec="backbone-sync" args=["backbone-sync",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'backbone-sync',
+10 verbose parsed url   path: 'backbone-sync',
+10 verbose parsed url   href: 'backbone-sync' }
+11 silly lockFile 23782a10-backbone-sync backbone-sync
+12 verbose lock backbone-sync /home/sens/.npm/23782a10-backbone-sync.lock
+13 silly lockFile 23782a10-backbone-sync backbone-sync
+14 silly lockFile 23782a10-backbone-sync backbone-sync
+15 verbose addNamed [ 'backbone-sync', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 13d949c9-backbone-sync backbone-sync@
+18 verbose lock backbone-sync@ /home/sens/.npm/13d949c9-backbone-sync.lock
+19 silly addNameRange { name: 'backbone-sync', range: '*', hasData: false }
+20 verbose url raw backbone-sync
+21 verbose url resolving [ 'https://registry.npmjs.org/', './backbone-sync' ]
+22 verbose url resolved https://registry.npmjs.org/backbone-sync
+23 info trying registry request attempt 1 at 22:08:20
+24 http GET https://registry.npmjs.org/backbone-sync
+25 http 404 https://registry.npmjs.org/backbone-sync
+26 verbose headers { date: 'Mon, 23 Jun 2014 19:08:21 GMT',
+26 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 verbose headers   'content-type': 'application/json',
+26 verbose headers   'cache-control': 'max-age=0',
+26 verbose headers   'content-length': '52',
+26 verbose headers   'accept-ranges': 'bytes',
+26 verbose headers   via: '1.1 varnish',
+26 verbose headers   age: '0',
+26 verbose headers   'x-served-by': 'cache-fra1228-FRA',
+26 verbose headers   'x-cache': 'MISS',
+26 verbose headers   'x-cache-hits': '0',
+26 verbose headers   'x-timer': 'S1403550501.343200,VS0,VE176',
+26 verbose headers   'keep-alive': 'timeout=10, max=50',
+26 verbose headers   connection: 'Keep-Alive' }
+27 silly registry.get cb [ 404,
+27 silly registry.get   { date: 'Mon, 23 Jun 2014 19:08:21 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=0',
+27 silly registry.get     'content-length': '52',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-fra1228-FRA',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1403550501.343200,VS0,VE176',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly lockFile 13d949c9-backbone-sync backbone-sync@
+29 silly lockFile 13d949c9-backbone-sync backbone-sync@
+30 error 404 404 Not Found: backbone-sync
+30 error 404
+30 error 404 'backbone-sync' is not in the npm registry.
+30 error 404 You should bug the author to publish it
+30 error 404 It was specified as a dependency of 'mona'
+30 error 404
+30 error 404 Note that you can also install from a
+30 error 404 tarball, folder, or http url, or git url.
+31 error System Linux 3.2.0-64-generic
+32 error command "/usr/bin/node" "/usr/bin/npm" "install" "backbone-sync" "--save"
+33 error cwd /home/sens/www/mona
+34 error node -v v0.10.28
+35 error npm -v 1.4.9
+36 error code E404
+37 verbose exit [ 1, true ]

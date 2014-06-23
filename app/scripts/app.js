@@ -4,7 +4,9 @@ define([
     'models/options',
     'views/catalog',
     'views/comment',
+    'views/gallery',
     'views/order',
+    'views/main-news',
     'mainpage'
     ], function(
         $,
@@ -12,10 +14,12 @@ define([
         optionsModel,
         catalogView,
         commentView,
+        galleryView,
         orderView,
+        mainNewsView,
         mainpageModule
     ) {
-
+    vent = _.extend({}, Backbone.Events);
     var App = Backbone.Router.extend({
         routes: {
             '': 'index',
@@ -23,7 +27,9 @@ define([
             'add_order/:price/:image': 'order',
             'add_comment': 'comment',
             'catalog/:name': 'catalog',
-            'catalog/:name/:id': 'gallery'
+            'catalog/:name/:id': 'gallery',
+            'news': 'news',
+            'news/:id': 'news'
         },
 
         initialize: function() {
@@ -76,7 +82,28 @@ define([
         },
 
         gallery: function(name, id) {
+            if (this.params.get('gallery') === null) {
+                var options = {name: name, id: id};
+                this.params.set({gallery: new galleryView({params: this.params, app: this})});
+                $('body').append(this.params.get('gallery').render(options));
+                this.params.get('gallery').$('[data-gallery]').fotorama()
+            }
+            this.params.get('gallery').selectGallery(name, id);
+            if (this.params.get('gallery').model.get('open') === false) {
+                this.params.get('gallery').model.set({open: true});
+            }
             console.log('catalog ' + name + ' ' + id);
+        },
+
+        news: function(id) {
+            if (this.params.get('news') === null) {
+                this.params.set({news: new mainNewsView});
+            }
+            var news = this.params.get('news')
+            if (id) {
+                console.log(news)
+                news.collection.nextPage(id)
+            }
         }
     });
 

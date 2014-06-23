@@ -1,0 +1,75 @@
+
+
+#top_menu{
+	float: left;
+	width: 100%;
+	}
+	#top_menu ul{
+		float: left;
+		padding: 20px 0 10px 0;
+		width: 100%;
+		}
+		#top_menu ul li{
+			background: #565656;
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+			-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+			-o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+			-ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+			float: left;
+			height: 90px;
+			margin: 0 0px 10px 10px;
+
+			}
+			#top_menu ul li a{
+				float: left;
+				height: 100%;
+				text-align: center;
+				text-decoration: none;
+				width: 100%;
+				}
+				#top_menu ul li a .ico{
+					background-size: 50px;
+					float:left;
+					height: 55px;
+					margin-top: 10px;
+					width: 100%;
+					}
+					#top_menu ul li.news a .ico{background: url('../../../images/white/news.png') top center no-repeat;}
+					#top_menu ul li.catalog a .ico{background: url('../../../images/white/favs.png') top center no-repeat;}
+					#top_menu ul li.logout a .ico{background: url('../../../images/white/logout.png') top center no-repeat;}
+					#top_menu ul li.settings a .ico{background: url('../../../images/white/settings.png') top center no-repeat;}
+					#top_menu ul li.comments a .ico{background: url('../../../images/white/comments.png') top center no-repeat;}
+					#top_menu ul li.articles a .ico{background: url('../../../images/white/article.png') top center no-repeat;}
+					#top_menu ul li.slider a .ico{background: url('../../../images/white/video.png') top center no-repeat;}
+					#top_menu ul li.filemanager a .ico{background: url('../../../images/white/save.png') top center no-repeat;}
+					#top_menu ul li.gifs a .ico{background: url('../../../images/white/video.png') top center no-repeat;}
+					#top_menu ul li.orders a .ico{background: url('../../../images/white/mail.png') top center no-repeat;}
+
+				#top_menu ul li a .name{
+					color: #fff;
+					font: normal 16px/20px Tahoma, Verdana, Arial;
+					float: left;
+					height: 20px;
+					text-align: center;
+					width: 100%;
+					}
+		/*active */
+		#top_menu ul li.active{
+			background: orange;
+			}
+		/*search*/
+		#top_menu ul li.search{
+			float: right !important;
+			margin: 0px 10px 10px 0px !important;
+			background: silver;
+			}
+		/*logout */
+		#top_menu ul li.logout{
+			float: right !important;
+			margin: 0px 10px 10px 0px !important;
+			background: teal;
+			}
+
+
+
