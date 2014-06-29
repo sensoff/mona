@@ -25,11 +25,6 @@
 			<?php
 					//$this->renderPartial("application.views.site._langMenu", array('langs'=>Lang::getLangs()));
 				?>
-	<div class="product_about">
-		<div class="image">
-			<img alt="" src="../images/catalog/medium/<?php echo $model->image1; ?>" />
-		</div>
-	</div>
 	<div class="product_name">
 		<?php echo $model->name_lang1; ?>
 	</div>

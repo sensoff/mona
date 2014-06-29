@@ -90,10 +90,10 @@ class ProductController extends Controller
 					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image);
 					$ih = new CImageHandler();
 					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
-					thumb('580', false)->
+					thumb('700', false)->
 					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/medium').'/'.$model->image);
 					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
-					thumb('200', false)->
+					thumb('215', false)->
 					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/small').'/'.$model->image);
 
 				}
@@ -146,10 +146,10 @@ class ProductController extends Controller
 					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image);
 					$ih = new CImageHandler();
 					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
-					thumb('300', false)->
+					thumb('700', false)->
 					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/medium').'/'.$model->image);
 					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
-					thumb('300', false)->
+					thumb('215', false)->
 					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/small').'/'.$model->image);
 					$criteria=new CDbCriteria();
 					$criteria->addCondition('prod_id = :pid');

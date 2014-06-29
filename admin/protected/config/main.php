@@ -102,6 +102,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-		'imagePath'=>'http://localhost/melony/images/',
+		'imagePath'=>'http://localhost/mona/images/',
 	),
 );

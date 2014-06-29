@@ -1,18 +1,32 @@
 <div class="row">
 	<div class="tablecell cell">
 		<div class="tcontent">
-			<span class="cell_name">Позиция: </span>
-			<span class="cell_value"><?php echo $pos?></span>
+			<span class="cell_name">Дата: </span>
+			<span class="cell_value"><?php echo $article->create_date ?></span>
 		</div>
 	</div>
-	
+
 	<div class="tablecell cell6 sliding">
 		<div class="tcontent">
-			<span class="cell_name">Название: </span>
-			<span class="cell_value"><?php echo $article->name_lang1?></span>
+			<span class="cell_name">Новость: </span>
+			<span class="cell_value">
+				<?php
+					$news_length = 150;
+					$news_text = $article->main_text_lang1;
+					if (strlen($news_text) > $news_length) {
+						for($i=0; $i<strlen($article->main_text_lang1); $i++) {
+							echo $news_text[$i];
+						}
+						echo '...';
+					} else {
+						echo $article->main_text_lang1;
+					}
+				?>
+
+			</span>
 		</div>
 	</div>
-	
+
 	<div class="tablecell cell">
 		<div class="tcontent">
 			<span class="actions">

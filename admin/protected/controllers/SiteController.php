@@ -176,11 +176,6 @@ class SiteController extends Controller
 	}
 
 	function actionSaveContacts(){
-		if(isset($_POST['Contacts']['map'])){
-			$contact=Contacts::model()->findByPk(1);
-			$contact->map=$_POST['Contacts']['map'];
-			$contact->save();
-		}
 		$params=Params::model()->findAll();
 		$params[0]->value=$_POST['firm'];
 		$params[0]->save();
@@ -200,27 +195,8 @@ class SiteController extends Controller
 		$params[7]->save();
 		$params[8]->value=$_POST['slogan'];
 		$params[8]->save();
-		$params[9]->value=$_POST['main_text'];
-		$params[9]->save();
 
-		$contact=Contacts::model()->findByPk(1);
-		$user=Yii::app()->db->createCommand()->select('*')->from('site_admin')->where('id = 1')->queryAll();
-		$user=$user[0];
-		$params=Yii::app()->db->createCommand()->select('*')->from('params')->queryAll();
-		$days=Days::model()->findAll();
-		$days=$days[0];
-		$this->render('settings', array('user'=>$user, 'days'=>$days, 'contacts'=>$contact, 'params'=>$params));
-	}
 
-	 function actionSaveDays(){
-		$model=Days::model()->findAll();
-		$model=$model[0];
-		if(isset($_POST['Days'])){
-			echo var_dump($_POST['Days']);
-			$model->attributes=$_POST['Days'];
-			echo var_dump($model->getErrors());
-			$model->save();
-		}
 		$contact=Contacts::model()->findByPk(1);
 		$user=Yii::app()->db->createCommand()->select('*')->from('site_admin')->where('id = 1')->queryAll();
 		$user=$user[0];

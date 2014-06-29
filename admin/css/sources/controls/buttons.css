@@ -103,4 +103,8 @@
 		background: #eee url('../../../images/black_without_circle/camera.png') center center no-repeat;
 		background-size: 30px;
 		}
+	.actions a.answer{
+		background: #eee url('../../../images/black_without_circle/comments.png') center center no-repeat;
+		background-size: 30px;
+		}
 

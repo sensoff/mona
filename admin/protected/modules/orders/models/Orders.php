@@ -38,7 +38,7 @@ class Orders extends CActiveRecord
 			array('id', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user, phone, date, approve', 'safe', 'on'=>'search'),
+			array('id, user, phone, product, price, date, approve', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +62,8 @@ class Orders extends CActiveRecord
 			'id' => 'ID',
 			'user' => 'User',
 			'phone' => 'Phone',
+			'product' => 'Product',
+			'price' => 'Price',
 			'date' => 'Date',
 			'approve' => 'approve'
 		);

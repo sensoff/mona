@@ -3,8 +3,7 @@
 							<div class="thead">
 								<div class="row">
 									<div class="tablecell cell">Позиция</div>
-									<div class="tablecell cell">Фото</div>
-									<div class="tablecell cell5 sliding">Имя</div>
+									<div class="tablecell cell6 sliding">Имя</div>
 									<div class="tablecell cell">Действия</div>
 								</div>
 							</div>

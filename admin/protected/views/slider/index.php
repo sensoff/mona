@@ -20,7 +20,7 @@
 		</div>
 		<div class="conteiner">
 			<div class="left_sidebar">
-				
+
 			</div>
 			<div class="center">
 				<div class="tactions cell8">

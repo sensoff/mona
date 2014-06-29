@@ -259,22 +259,6 @@
 							</div>
 						</div>
 
-						<div class="row">
-							<div class="tablecell cell2">
-								<div class="tcontent">
-									<span class="cell_name">Текст в слайдере</span>
-								</div>
-							</div>
-							<div class="tablecell cell6">
-								<div class="tcontent">
-									<span class="cell_value">
-										<textarea class="block2" name="main_text"><?php echo $params[9]['value']?></textarea>
-									</span>
-								</div>
-							</div>
-						</div>
-
-
 					</div>
 					<div class="tactions cell8">
 					<button class="block2 btn ok"><span>Сохранить</span></button>

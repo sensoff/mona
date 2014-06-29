@@ -73,13 +73,14 @@ class CommentsController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate($id, $show=null)
 	{
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		$comments=Comments::getComments($show);
+		$counts=Comments::getCounts();
 		if(isset($_POST['Comments']))
 		{
 			$model->attributes=$_POST['Comments'];
@@ -89,6 +90,8 @@ class CommentsController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+			'counts'=>$counts,
+			'comments'=>$comments,
 		));
 	}
 

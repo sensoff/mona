@@ -43,7 +43,7 @@
 	<div class="tablecell cell">
 		<div class="tcontent">
 			<span class="actions">
-
+				<a href="<?php echo CHtml::normalizeUrl(array('/comments/comments/update', 'id'=>$comment->id))?>" class="btn answer"></a>
 			<?php
 				if ($comment->approve == 0) {
 					echo CHtml::link('',array('/comments/comments/approved', 'id'=>$comment->id), array(

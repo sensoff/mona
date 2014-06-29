@@ -40,7 +40,7 @@ class Article extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name_lang1, blog_id, main_text_lang1, show,  alias', 'required'),
+			array('main_text_lang1', 'required'),
 			array('blog_id, show', 'numerical', 'integerOnly'=>true),
 			array('name_lang1, name_lang2, name_lang3', 'length', 'max'=>50),
 			array('description_meta_lang1, description_meta_lang2, description_meta_lang3, main_text_lang2, main_text_lang3, keywoards, title_lang1, title_lang2, title_lang3, alias', 'length', 'max'=>5000),
@@ -74,7 +74,7 @@ class Article extends CActiveRecord
 				'name_lang3' => 'Заголовок страницы',
 			'blog_id' => 'Blog',
 			'pre_text' => 'Пре-текст',
-			'main_text_lang1' => 'Текст страницы',
+			'main_text_lang1' => 'Текст нововсти',
 				'main_text_lang2' => 'Текст страницы',
 				'main_text_lang3' => 'Текст страницы',
 			'create_date' => 'Create Date',
@@ -113,7 +113,7 @@ class Article extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	
+
 	static function getArticles($blogid=0, $show=null){
 		$criteria=new CDbCriteria();
 		$criteria->addCondition('blog_id = :bid');
@@ -125,7 +125,7 @@ class Article extends CActiveRecord
 		$articles=self::model()->findAll($criteria);
 		return $articles;
 	}
-	
+
 	static function getCounts(){
 		//все
 		$criteria=new CDbCriteria();
@@ -141,13 +141,13 @@ class Article extends CActiveRecord
 		$counts['nshow']=Article::model()->count($criteria);
 		return $counts;
 	}
-	
+
 	static function getAboutCounts(){
 		//about
 		$criteria=new CDbCriteria();
 		$criteria->addCondition('t.blog_id = 2');
 		$counts['about']=Article::model()->count($criteria);
-		//learn	
+		//learn
 		$criteria=new CDbCriteria();
 		$criteria->addCondition('t.blog_id = 3');
 		$counts['learn']=Article::model()->count($criteria);

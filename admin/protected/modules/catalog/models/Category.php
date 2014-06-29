@@ -51,9 +51,9 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name_lang1,  catalog_id, image1, url', 'required'),
+			array('name_lang1,  catalog_id, url, description_lang1, description_meta_lang1, ', 'required'),
 			array('parent_category, catalog_id, show', 'numerical', 'integerOnly'=>true),
-			array('name_lang1, name_lang2, name_lang3, url, image1', 'length', 'max'=>100),
+			array('name_lang1, name_lang2, name_lang3, url', 'length', 'max'=>100),
 			array('description_lang1, description_lang2, description_lang3, description_meta_lang1, description_meta_lang2, description_meta_lang3, title_lang1, title_lang2, title_lang3', 'length', 'max'=>5000),
 			array('url', 'unique', 'message'=>'Запись с таким именем уже существует.'),
 			// The following rule is used by search().
@@ -88,7 +88,7 @@ class Category extends CActiveRecord
 			'parent_category' => 'Родительская категория',
 			'catalog_id' => 'Catalog',
 			'url' => 'Alias ("ссылка на каталог")',
-			'description_meta_lang1'=>'Description',
+			'description_meta_lang1'=>'Цена от(число)',
 			'description_meta_lang2'=>'Description',
 			'description_meta_lang3'=>'Description',
 			'title_lang1'=>'Заголовок страницы',
@@ -98,7 +98,7 @@ class Category extends CActiveRecord
 			'seo_id' => 'Seo',
 			'image1' => 'Фото каталога',
 			'image2' => 'Дополнительное изображение',
-			'description_lang1'=>'О каталоге',
+			'description_lang1'=>'Срок изготовления(число)',
 			'description_lang2'=>'О каталоге',
 			'description_lang3'=>'О каталоге',
 			'show'=>'Отоброжать на сайте',

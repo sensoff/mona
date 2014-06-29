@@ -38,7 +38,7 @@ class Comments extends CActiveRecord
 			array('id', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user, comment, date, rating, approve', 'safe', 'on'=>'search'),
+			array('id, user, comment, answer, date, rating, approve', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,9 +62,10 @@ class Comments extends CActiveRecord
 			'id' => 'ID',
 			'user' => 'User',
 			'comment' => 'Comment',
+			'answer' => 'Ответ',
 			'date' => 'Date',
 			'rating' => 'Rating',
-			'approve' => 'approve'
+			'approve' => 'Опубликован'
 		);
 	}
 

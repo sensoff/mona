@@ -48,6 +48,7 @@ return array(
         'add-order'=>'site/AddOrder',
         'catalog/<url:\w+>'=>'site/Catalog',
         'comments/'=>'site/Comments',
+        'news/:id'=>'site/News'
 			),
 		),
 

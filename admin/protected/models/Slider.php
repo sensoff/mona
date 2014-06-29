@@ -12,7 +12,7 @@
  */
 class Slider extends CActiveRecord
 {
-	
+
 	public $img;
 	/**
 	 * Returns the static model of the specified AR class.
@@ -69,8 +69,8 @@ class Slider extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'file' => 'Изображение',
-			'url' => 'Ссылка',
-			'show' => 'Отоюрожать на сайте',
+			'url' => 'Цена',
+			'show' => 'Отоброжать на сайте',
 			'position' => 'Позиция',
 			'text_lang1'=>'Текст на слайде',
 				'text_lang2'=>'Текст на слайде',
@@ -99,7 +99,7 @@ class Slider extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	
+
 	static function getSlides(){
 		$criteria=new CDbCriteria();
 		$criteria->order="position ASC";

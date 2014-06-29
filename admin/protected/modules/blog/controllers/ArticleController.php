@@ -93,8 +93,8 @@ class ArticleController extends Controller
 			if(empty($model->description_lang3)){
 				$model->main_text_lang3=$model->main_text_lang1;
 			}
-			
-			
+
+
 		if($model->save())
 				$this->redirect(array('/blog/article/index','blogid'=>$model->blog_id));
 		}
@@ -119,7 +119,7 @@ class ArticleController extends Controller
 	public function actionUpdate($id, $blogid=1, $show=null)
 	{
 		$model=$this->loadModel($id);
-
+		$counts=Article::getCounts();
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -133,6 +133,8 @@ class ArticleController extends Controller
 		}
 		$this->render('update',array(
 			'model'=>$model,
+			'counts'=>$counts,
+			'blogid'=>$blogid
 		));
 	}
 
@@ -155,11 +157,13 @@ class ArticleController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($show=null)
 	{
-		$articles=Article::getArticles(1);
+		$counts=Article::getCounts();
+		$articles=Article::getArticles(1, $show);
 		$this->render('index',array(
 				'articles'=>$articles,
+				'counts'=>$counts,
 		));
 	}
 

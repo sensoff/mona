@@ -78,7 +78,7 @@ class Product extends CActiveRecord
 	{
 		return array(
 				'id' => 'ID',
-				'name_lang1' => 'Название фото <img style="width: 20px;" src="'.Yii::app()->getBaseUrl().'/images/language/russia.png'.'"> :',
+				'name_lang1' => 'Цена:',
 				'name_lang2' => 'Название фото <img style="width: 20px;" src="'.Yii::app()->getBaseUrl().'/images/language/uk.png'.'"> :',
 				'name_lang3' => 'Название фото <img style="width: 20px;" src="'.Yii::app()->getBaseUrl().'/images/language/belarus.png'.'">',
 				'description' => 'Описание товара:',

@@ -25,7 +25,6 @@
 		</div>
 </div>
 <div class="table cell8 prosmotr">
-	<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'req'=>1, 'model'=>$model, 'elem'=>'image1', 'elemtype'=>'image'))?>
 	<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'model'=>$model, 'elem'=>'show', 'elemtype'=>'checkbox'))?>
 	<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'req'=>1, 'model'=>$model, 'elem'=>'url', 'elemtype'=>'textfield'))?>
 	</div>
@@ -43,7 +42,7 @@
 		$style="display: none;";
 		$req=null;
 	}
-		$this->renderPartial('_langForm', array(
+		$this->renderPartial('_noLangForm', array(
 					'lang'=>$langs[$i],
 					'style'=>$style,
 					'req'=>$req,

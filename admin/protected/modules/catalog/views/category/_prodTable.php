@@ -3,7 +3,7 @@
 							<div class="thead">
 								<div class="row">
 									<div class="tablecell cell">Фото</div>
-									<div class="tablecell cell5 sliding">Название</div>
+									<div class="tablecell cell5 sliding">Цена</div>
 									<div class="tablecell cell">Опубликованно</div>
 									<div class="tablecell cell">Действия</div>
 								</div>

@@ -9,15 +9,21 @@
 	<div class="tablecell cell">
 		<div class="tcontent">
 			<span class="cell_name">Пользователь: </span>
-			<span class="cell_value"><?php echo $order->user?></span>
+			<span class="cell_value small"><?php echo $order->user?></span>
 		</div>
 	</div>
 
 	<div class="tablecell cell4 sliding">
 		<div class="tcontent">
 			<span class="cell_name">Отзыв: </span>
-			<span class="cell_value"><?php echo $order->phone;?></span>
+			<span class="cell_value">+375<?php echo $order->phone;?></span>
 		</div>
+		<?php if ($order->product) {?>
+			<div class="tcontent">
+				<img src="<?php echo Yii::app()->baseUrl?>/../images/<?php echo $order->product ?>" />
+				<?php echo $order->price ?>
+			</div>
+		<? } ?>
 	</div>
 
 	<div class="tablecell cell">
