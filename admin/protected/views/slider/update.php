@@ -16,11 +16,8 @@
 		</div>
 <div class="conteiner">
 			<div class="left_sidebar">
-		<?php 
-					$this->renderPartial("application.views.site._langMenu", array('langs'=>Lang::getLangs()));
-				?>
 			</div>
-			
+
 				<?php $this->renderPartial('_form', array('model'=>$model, 'act'=>'u'))?>
-			
+
 		</div>

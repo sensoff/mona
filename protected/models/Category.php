@@ -148,13 +148,13 @@ class Category extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	
-	static public function getMasters(){
+
+	static public function getCategories(){
 		$criteria = new CDbCriteria();
 		$criteria->addCondition('t.show = 1');
 		return self::model()->findAll($criteria);
 	}
-	
+
 	static public function getByAlias($alias=null){
 		$criteria=new CDbCriteria();
 		$criteria->addCondition('url = :alias');

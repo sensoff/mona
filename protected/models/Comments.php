@@ -104,6 +104,18 @@ class Comments extends CActiveRecord
 		return self::model()->findAll($criteria);
 	}
 
+	static function getComment($show=1) {
+		$criteria = new CDbCriteria();
+		if ($show != null) {
+			$criteria->addCondition('t.approve= :approve');
+			$criteria->params[':approve'] = $show;
+		}
+		$criteria->order="date DESC";
+		$criteria->limit = 1;
+		$criteria->offset = 0;
+		return self::model()->findAll($criteria);
+	}
+
 	static function getCounts() {
 		$counts = array();
 		//all

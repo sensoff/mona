@@ -69,10 +69,10 @@ class Slider extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'file' => 'Изображение',
-			'url' => 'Цена',
+			'url' => 'Ссылка',
 			'show' => 'Отоброжать на сайте',
 			'position' => 'Позиция',
-			'text_lang1'=>'Текст на слайде',
+			'text_lang1'=>'Цена',
 				'text_lang2'=>'Текст на слайде',
 				'text_lang3'=>'Текст на слайде',
 		);

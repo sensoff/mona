@@ -38,8 +38,11 @@ class SiteController extends Controller
 	public function actionIndex()
 	{
 		$params = Params::getParams();
-		$slides = Category::getMasters();
-		$comments = Comments::getComments(1);
+		$slides = Slide::getSlides();
+		$comments = Comments::getComment();
+		$news = Article::getLastArticle();
+		$products = Product::getProducts();
+		$categories = Category::getCategories();
 		$this->firm = $params[0]->value;
 		$this->ynp = $params[1]->value;
 		$this->phone = $params[2]->value;
@@ -51,7 +54,17 @@ class SiteController extends Controller
 		$this->slogan = $params[8]->value;
 		$this->slider_text = $params[9]->value;
 
-		$this->render('index', array('slides'=>$slides, 'params'=>$params, 'comments'=>$comments));
+		$this->render(
+			'index',
+			array(
+				'slides'=>$slides,
+				'params'=>$params,
+				'comment'=>$comments[0],
+				'news'=>$news[0],
+				'categories'=>$categories,
+				'products'=>$products
+			)
+		);
 	}
 	public function actionComments()
 	{

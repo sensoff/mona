@@ -27,7 +27,7 @@
 				</div>
 			</div>
 			<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'req'=>1, 'model'=>$model, 'elem'=>'file', 'elemtype'=>'image'))?>
-			<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'model'=>$model, 'elem'=>'url', 'elemtype'=>'textfield'))?>
+			<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'model'=>$model, 'elem'=>'text_lang1', 'elemtype'=>'textfield'))?>
 			<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'model'=>$model, 'elem'=>'show', 'elemtype'=>'checkbox'))?>
 			<?php $this->renderPartial('application.views.site._formLine', array('form'=>$form, 'model'=>$model, 'elem'=>'position', 'elemtype'=>'textfield'))?>
 		</div>

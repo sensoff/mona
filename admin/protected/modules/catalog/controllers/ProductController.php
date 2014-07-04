@@ -87,15 +87,20 @@ class ProductController extends Controller
 			}
 			if($model->save()){
 				if($model->img){
-					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image);
+					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image);
 					$ih = new CImageHandler();
-					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
 					thumb('700', false)->
-					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/medium').'/'.$model->image);
-					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/medium').'/'.$model->image);
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
+					thumb('700', false)->
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/medium').'/'.$model->image);
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
 					thumb('215', false)->
-					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/small').'/'.$model->image);
-
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/small').'/'.$model->image);
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
+					thumb('215', false)->
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/small').'/'.$model->image);
 				}
 				$this->redirect(array('/catalog/category/view','id'=>$model->category_id));
 
@@ -143,14 +148,20 @@ class ProductController extends Controller
 			}
 			if($model->save()){
 				if($model->img){
-					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image);
+					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image);
 					$ih = new CImageHandler();
-					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
 					thumb('700', false)->
-					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/medium').'/'.$model->image);
-					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/products').'/'.$model->image)->
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/medium').'/'.$model->image);
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
+					thumb('700', false)->
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/medium').'/'.$model->image);
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
 					thumb('215', false)->
-					save(realpath(Yii::getPathOfAlias('webroot').'/../images/products/small').'/'.$model->image);
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/small').'/'.$model->image);
+					Yii::app()->ih->load(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->image)->
+					thumb('215', false)->
+					save(realpath(Yii::getPathOfAlias('webroot').'/../images/app/small').'/'.$model->image);
 					$criteria=new CDbCriteria();
 					$criteria->addCondition('prod_id = :pid');
 					$criteria->addCondition('image_name = :in');

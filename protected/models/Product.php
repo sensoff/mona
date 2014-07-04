@@ -122,14 +122,9 @@ class Product extends CActiveRecord
 		));
 	}
 
-	static public function getProducts($master = null) {
+	static public function getProducts() {
 		$criteria = new CDbCriteria();
-
-		if(isset($master)){
-			$criteria->addCondition("category_id = :master");
-			$criteria->params[':master']=$master;
-		}
-		return self::model()->with('cat')->findAll($criteria);
+		return self::model()->findAll($criteria);
 	}
 
 	static public function getProducts2( $type = null, $master = null ) {

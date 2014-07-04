@@ -54,7 +54,6 @@ var list_template = '\
                     fotorama.show(_this.first_position - 1);
                     fotorama.first = null;
                 }
-
             });
         },
 

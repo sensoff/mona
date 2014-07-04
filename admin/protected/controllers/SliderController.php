@@ -71,10 +71,14 @@ class SliderController extends Controller
 		{
 			$model->attributes=$_POST['Slider'];
 			$model->img=CUploadedFile::getInstance($model,'file');
-			$model->file=$model->img->getName();
+			//$model->file=$model->img->getName();
+			if($model->img){
+				$name=$model->url;
+				$model->file=rand(0, 100000000).'.'.$model->img->getExtensionName();
+			}
 			if($model->save()){
 				if($model->img){
-					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/slider').'/'.$model->img);
+					$model->img->saveAs(realpath(Yii::getPathOfAlias('webroot').'/../images/app').'/'.$model->file);
 				}
 				$this->redirect(array('index'));
 			}

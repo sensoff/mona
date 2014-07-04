@@ -2,31 +2,31 @@
 	<div class="tablecell cell">
 		<div class="tcontent">
 			<span class="cell_name">Фото: </span>
-			<span class="cell_value"><img src="<?php echo Yii::app()->params['imagePath'].'products/small/'.$prod->image ?>"></span>
+			<span class="cell_value"><img src="<?php echo Yii::app()->params['imagePath'].'app/small/'.$prod->image ?>"></span>
 		</div>
 	</div>
-	
+
 	<div class="tablecell cell5 sliding">
 		<div class="tcontent">
 			<span class="cell_name">Название: </span>
 			<span class="cell_value"><?php echo $prod->name_lang1?></span>
 		</div>
 	</div>
-	
+
 	<div class="tablecell cell">
 		<div class="tcontent">
 			<span class="cell_name">Опубликовано: </span>
 			<span class="cell_value">
-			<?php 
+			<?php
 				if($prod->top==1){
 					echo 'да';
 				} else {
-					echo 'нет';	
+					echo 'нет';
 				}
 			?>
 			</span>
 		</div>
-			
+
 	</div>
 	<div class="tablecell cell">
 		<div class="tcontent">

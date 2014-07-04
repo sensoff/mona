@@ -136,7 +136,7 @@ class Article extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	
+
 	static function getArticleById($id){
 		if (!empty($id)) {
 			$criteria = new CDbCriteria();
@@ -146,5 +146,23 @@ class Article extends CActiveRecord
 		} else {
 			return null;
 		}
+	}
+
+	static function getArticles($limit = null) {
+		$criteria = new CDbCriteria();
+		$criteria->order="id DESC";
+		if ($limit != null) {
+			$criteria->limit = $limit;
+		}
+		return self::model()->findAll($criteria);
+	}
+
+	static function getLastArticle($position = 0) {
+		$criteria = new CDbCriteria();
+		$criteria->order="id DESC";
+		$criteria->limit = 1;
+		$criteria->offset = $position;
+
+		return self::model()->findAll($criteria);
 	}
 }

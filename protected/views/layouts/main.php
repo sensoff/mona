@@ -1,73 +1,62 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-	<title>Мебель 100</title>
-
-	<meta property="description" content="<?php echo $this->description; ?>">
-	<meta property="og:description" content="<?php echo $this->description; ?>">
-
-	<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/reset.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/common.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css//nivo-slider.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/js/components/fotorama/fotorama.css" type="text/css" media="screen, projection">
-  <script data-main="<?php echo Yii::app()->baseUrl?>/js/required.js" src="<?php echo Yii::app()->baseUrl?>/js/components/requirejs/require.js"></script>
-</head>
-<body>
-  <div class="page">
-    <div class="wrap">
-      <div class="wrapper-header-top">
-        <div class="header-top">
-          <?php echo $this->slogan ?>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>M1</title>
+        <meta property="description" content="<?php echo $this->description; ?>">
+        <meta property="og:description" content="<?php echo $this->description; ?>">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/main.css" type="text/css" media="screen, projection">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="<?php echo Yii::app()->baseUrl?>/bower_components/modernizr/modernizr.js"></script>
+        <script data-main="<?php echo Yii::app()->baseUrl?>/scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="i-layout">
+            <header>
+                <div class="b-header">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="images/logo.png" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="right">
+                        <div class="order">
+                            <a href="#add_order">
+                                заказать звонок
+                            </a>
+                        </div>
+                        <div class="social">
+                            <div class="e-social">
+                                <a href="<?php echo $this->vk ?>" target="_blank" class="vk"></a>
+                                <a href="<?php echo $this->fb ?>" target="_blank" class="fb"></a>
+                            </div>
+                        </div>
+                        <div class="number">
+                            <?php echo $this->phone ?>
+                        </div>
+                        <div class="form-container" data-order-container></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </header>
+            <?php echo $content;?>
         </div>
-      </div>
-      <div class="wrapper-header">
-        <div class="header">
-          <div class="logo">
-            <a href="<?php echo Yii::app()->baseUrl?>/">
-              <img src="<?php echo Yii::app()->baseUrl?>/images/logo.png" alt="Логотип Мебель 100" title="На главную" />
-            </a>
-          </div>
-          <div class="right">
-            <div class="email">
-              <div class="text">
-                 <?php echo $this->email ?>
-              </div>
-              <div class="logot"></div>
+        <footer>
+            <div class="b-footer">
+                2014 &copy; Копирование материалов без согласия владельцев запрещается
             </div>
-            <div class="phone">
-              <div class="text2">
-                <?php echo $this->phone ?>
-              </div>
-              <div class="logot"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrapper">
-      	<?php echo $content;?>
-      </div>
-
-
-    </div>
-  </div>
-  <div class="footer_wrapper">
-    <div class="footer">
-      <div class="about">
-        <?php echo $this->firm ?><br />
-        <span>УНП <?php echo $this->ynp ?></span>
-      </div>
-      <div class="social">
-        <span>Присоединяйтель к обсуждениям:</span>
-        <a class="vk" href="<?php echo $this->vk ?>" target="_blank"></a>
-        <a class="fb" href="<?php echo $this->fb ?>" target="_blank"></a>
-        <a class="inst" href="<?php echo $this->instagram ?>" target="_blank"></a>
-        <a class="odn" href="<?php echo $this->odn ?>" target="_blank"></a>
-      </div>
-    </div>
-  </div>
-</body>
+        </footer>
+    </body>
 </html>
