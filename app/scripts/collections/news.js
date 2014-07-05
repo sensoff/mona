@@ -16,7 +16,7 @@ define([
 
   var NewsCollection = Backbone.Collection.extend({
       model: NewsModel,
-      url: '/get-news',
+      url: 'get-news',
 
       initialize: function() {
           this.on('all', this.test, this);

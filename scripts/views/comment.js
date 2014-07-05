@@ -123,9 +123,9 @@ define([
                   'url': 'add-comment',
                   'success': function(data) {
                       if (data.res === 'ok') {
-                          _this.$('.add_comm .m_m_m_content').addClass('no_bg').html('<div class="send_ok">Спасибо за Ваш отзыв<br /> Нам очень важно Ваше мнение</div>');
+                          _this.$('.e-comment-form').html('<div class="send_ok" style="text-align: center;" >Спасибо за Ваш отзыв<br /> Нам очень важно Ваше мнение</div>');
                       } else {
-                          _this.$('.add_comm .m_m_m_content').addClass('no_bg').html('<div class="send_ok">Извените, произошла ошибка<br /> Обновите страницу и попробуйте сново</div>');
+                          _this.$('.e-comment-form').html('<div class="send_ok">Извените, произошла ошибка<br /> Обновите страницу и попробуйте сново</div>');
                       }
                   }
               });

@@ -115,9 +115,10 @@ class SiteController extends Controller
 		$catalog="[";
 
 		$slides=Category::getMasters();
+
 		for($i=0; $i<count($slides); $i++) {
 				$catalog = $catalog.'{"id":"'.$slides[$i]->url.'","title":"'.$slides[$i]->name_lang1.'","images":[';
-				$images=Product::getProducts($slides[$i]->id);
+				$images=Product::getProducts5($slides[$i]->id);
 				for($j=0; $j<count($images); $j++) {
 						$catalog = $catalog.'{"img":"'.$images[$j]->image.'","title":"'.$images[$j]->name_lang1.'"}';
 						if ($j !== count($images)-1) {
@@ -162,6 +163,24 @@ class SiteController extends Controller
 		return 0;
 	}
 
+	public function actionGetNews($position = 0) {
+		$news = Article::getLastArticle($position);
+		$next = Article::getLastArticle($position + 1);
+		if(count($news) > 0) {
+			$news[0]->id = $position;
+			if (count($next) > 0) {
+				$news[0]->alias = true;
+			} else {
+				$news[0]->alias = false;
+			}
+			echo CJSON::encode($news);
+		} else {
+			echo 'error';
+		}
+
+		return 0;
+	}
+
 	public function actionAddComment() {
 			if(isset($_POST['Comment'])) {
 					$comment = new Comments();
@@ -169,6 +188,8 @@ class SiteController extends Controller
 					$comment->comment = $_POST['Comment']['comment'];
 					$comment->rating = $_POST['Comment']['rating'];
 					$comment->date = date("Y-m-d");
+					$comment->product = $_POST['Comment']['img'];
+					$comment->product = $_POST['Comment']['price'];
 					$comment->approve = 0;
 					if ($comment->save()) {
 						echo CJSON::encode(array('res' => 'ok'));

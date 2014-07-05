@@ -7,12 +7,18 @@ define([
   var MainNews = Backbone.View.extend({
       el: '#main-news',
 
-      initialize: function() {
-          this.collection = new newsCollection;
+      initialize: function(options) {
+          this.collection = new newsCollection([{id: 0}]);
           this.model = new Backbone.Model({open: false});
-          //this.model.on('change:open', toggleShow, this);
-          //console.log(this);
-          //this.showAllNews();
+          this.collection.on('sync', this.addNews, this);
+          this.app = options.app;
+          this.collection_views = [];
+          var opts = {};
+          opts.el = '[data-first-news]';
+          opts.model = new Backbone.Model({open: true, read: true});
+          opts.app = this.app;
+          this.collection_views.push(new OneNewsView(opts));
+          console.log(this.collection_views)
       },
 
       toggleShow: function() {
@@ -23,21 +29,14 @@ define([
 
       },
 
-      showAllNews: function() {
-          for (var i=0; i<this.collection.models.length; i++) {
-              var options = {};
-              options.model = this.collection.models[i];
-              var one_news = new OneNewsView(options);
-              this.$el.append(one_news.render());
-          }
-          var _openNews = function(model, i) {
-              return setTimeout(function() {
-                  return model.set({open: true});
-            }, 0);
-          };
-          for (var i=0; i<this.collection.models.length; i++) {
-              _openNews(this.collection.models[i])
-          }
+      addNews: function() {
+          var news = new OneNewsView({
+              app: this.app,
+              model: this.collection.models[this.collection.models.length - 1]
+          });
+          this.collection_views.push(news);
+          this.$el.append(news.render());
+          news.model.set({open: true});
       }
 
   });

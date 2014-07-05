@@ -15,7 +15,7 @@ var list_template = '\
             data-loop="true"\
         >\
         <% for (var i=0; i<model.images.length; i++)  { %>\
-            <img src="images/gallery/<%= model.images[i].img %>" data-caption="<span>~ <%= model.images[i].title %>$ </span><a data-list-a class=' + "list-add-order" + ' href='+"#add_order/<%= model.images[i].title %>/<%= model.images[i].img %>"+'>Заказать похожий</a>" />\
+            <img src="images/app/<%= model.images[i].img %>" data-caption="<span>~ <%= model.images[i].title %>$ </span><a data-list-a class=' + "list-add-order" + ' href='+"#add_order/<%= model.images[i].title %>/<%= model.images[i].img %>"+'>Заказать похожий</a>" />\
         <% } %>\
         </div>\
     </div>\
@@ -38,7 +38,6 @@ var list_template = '\
             this.app = options.app;
             this.model.set({open: false});
             this.model.on('change:open', this.toggleOpen, this);
-
         },
 
         fotoramaEvents: function() {
@@ -54,7 +53,6 @@ var list_template = '\
                     fotorama.show(_this.first_position - 1);
                     fotorama.first = null;
                 }
-
             });
         },
 
@@ -90,7 +88,6 @@ var list_template = '\
 
         createOrder: function() {
             this.model.set({open: false});
-            console.log(this.app)
             this.app.params.get('gallery').model.set({open: false});
         }
 

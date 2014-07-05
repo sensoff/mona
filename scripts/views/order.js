@@ -6,7 +6,7 @@ define([
   ], function(Backbone, _, DropDownView, OrderModel) {
 
   var order_template = '\
-    <div class="b-order-form" style="display: none;">\
+    <div data-order-form class="b-order-form" style="display: none;">\
       <div class="line">\
         <div class="label">Ваше имя:</div>\
         <input class="name" type="text" name="user" value="" placeholder="Василий Васильевич" />\
@@ -18,17 +18,10 @@ define([
         <input class="phone" type="text" name="phone" value="" placeholder="1234567" />\
         <div class="errors" data-phone-error></div>\
       </div>\
-      <div data-similar>\
+      <div data-similar >\
         <% if (options) { %>\
-        <div class="line">\
-          <div class="similar">\
-            Я хочу заказать похожее \
-            <div class="similar-image">\
-              <img src="images/gallery/<%= options.img %>" />\
-              <div class="price">~ <%= options.price %> $</div>\
-            </div>\
-          </div>\
-        </div>\
+        <input type="hidden" name="img" value="<%= options.img %>" />\
+        <input type="hidden" name="price" value="<%= options.price %>" />\
         <% } %>\
       </div>\
       <div class="buttons">\
@@ -36,18 +29,12 @@ define([
         <button>Готово!</button>\
       </div>\
     </div>\
+    <div data-order-message class="b-order-form" style="display: none;"></div>\
   ';
 
   var similar_template = '\
-      <div class="line">\
-          <div class="similar">\
-              Я хочу заказать похожее \
-              <div class="similar-image">\
-                <img src="images/gallery/<%= options.img %>" />\
-                <div class="price">~ <%= options.price %> $</div>\
-              </div>\
-          </div>\
-      </div>\
+      <input type="hidden" name="img" value="<%= options.img %>" />\
+      <input type="hidden" name="price" value="<%= options.price %>" />\
   ';
 
   var OrderView = Backbone.View.extend({
@@ -90,9 +77,7 @@ define([
       },
 
       toggleOpen: function() {
-          console.log(1)
-
-          this.$('.b-order-form').slideToggle("fast");
+          this.$('[data-order-form]').slideToggle("fast");
       },
 
       closeOrder: function() {
@@ -117,15 +102,24 @@ define([
                   'type':'POST',
                   'dataType':'json',
                   'data': {'Order': this.model.toJSON()},
-                  'url': '/add-order',
+                  'url': 'add-order',
                   'success': function(data) {
+                      _this.$('[data-order-form]').slideToggle(300);
                       if (data.res === 'ok') {
-                          _this.$el.addClass('send_ok');
-                          _this.$('.b-order-form').html('<p>Ваша заявка принята</p><p>Скоро мы с Вами свяжемся</p>');
+                          setTimeout(function() {
+                            _this.$('[data-order-message]').html('<p>Ваша заявка принята</p><p>Скоро мы с Вами свяжемся</p>');
+                            _this.$('[data-order-message]').slideToggle(300);
+                          }, 300);
                       } else {
-                          _this.$el.addClass('send_error');
-                          _this.$('.b-order-form').html('<p>Извените, произошла ошибка</p><p>Обновите страницу и попробуйте сново</p>');
+                          setTimeout(function() {
+                            _this.$('[data-order-message]').html('<p>Извените, произошла ошибка</p><p>Обновите страницу и попробуйте сново</p>');
+                            _this.$('[data-order-message]').slideToggle(300);
+                          }, 300);
                       }
+                      setTimeout(function() {
+                          _this.closeOrder();
+                          _this.$('[data-order-message]').slideToggle(0);
+                      }, 5000);
                   }
               });
           }

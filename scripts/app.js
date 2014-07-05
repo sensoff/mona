@@ -4,6 +4,7 @@ define([
     'models/options',
     'views/catalog',
     'views/comment',
+    'views/comments',
     'views/gallery',
     'views/order',
     'views/main-news',
@@ -14,6 +15,7 @@ define([
         optionsModel,
         catalogView,
         commentView,
+        commentsView,
         galleryView,
         orderView,
         mainNewsView,
@@ -28,8 +30,8 @@ define([
             'add_comment': 'comment',
             'catalog/:name': 'catalog',
             'catalog/:name/:id': 'gallery',
-            'news': 'news',
-            'news/:id': 'news'
+            'news/:id': 'news',
+            'comments': 'comments'
         },
 
         initialize: function() {
@@ -84,25 +86,41 @@ define([
         gallery: function(name, id) {
             if (this.params.get('gallery') === null) {
                 var options = {name: name, id: id};
-                this.params.set({gallery: new galleryView({params: this.params, app: this})});
-                $('body').append(this.params.get('gallery').render(options));
-                this.params.get('gallery').$('[data-gallery]').fotorama()
+                var gallery = new galleryView({params: this.params, app: this});
+                this.params.set({gallery: gallery});
+                gallery.collection.fetch({
+                    success: function() {
+                        $('body').append(gallery.render(options));
+                        gallery.selectGallery(name, id);
+                        gallery.model.set({open: true});
+                    }
+                });
+            } else {
+                this.params.get('gallery').selectGallery(name, id);
+                if (this.params.get('gallery').model.get('open') === false) {
+                    this.params.get('gallery').model.set({open: true});
+                }
             }
-            this.params.get('gallery').selectGallery(name, id);
-            if (this.params.get('gallery').model.get('open') === false) {
-                this.params.get('gallery').model.set({open: true});
-            }
-            console.log('catalog ' + name + ' ' + id);
         },
 
         news: function(id) {
             if (this.params.get('news') === null) {
-                this.params.set({news: new mainNewsView});
+                this.params.set({news: new mainNewsView({app: this})});
             }
-            var news = this.params.get('news')
-            if (id) {
-                console.log(news)
+            var news = this.params.get('news');
+            if (news.collection.get(id)) {
+                console.log('show next');
+            } else {
                 news.collection.nextPage(id)
+            }
+        },
+
+        comments: function() {
+            if (!_.isObject(this.params.get('comments'))) {
+                this.params.set({comments: new commentsView({app: this})});
+            } else {
+                var comments = this.params.get('comments');
+                comments.model.set({open: true});
             }
         }
     });

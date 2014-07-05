@@ -4,9 +4,10 @@ define([
 
   var NewsModel = Backbone.Model.extend({
       defaults: {
-          description: undefined,
-          date: undefined,
-          open: false
+          main_text_lang1: undefined,
+          create_date: undefined,
+          open: false,
+          read: true
       }
 
   });

@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'1M',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -42,13 +42,13 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
+				'get-news/<position:\d+>'=>'site/GetNews',
 				'get-comments'=>'site/GetComments',
         'get-catalog'=>'site/GetCatalog',
         'add-comment'=>'site/AddComment',
         'add-order'=>'site/AddOrder',
         'catalog/<url:\w+>'=>'site/Catalog',
-        'comments/'=>'site/Comments',
-        'news/:id'=>'site/News'
+        'comments/'=>'site/Comments'
 			),
 		),
 

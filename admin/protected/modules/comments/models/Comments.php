@@ -38,6 +38,7 @@ class Comments extends CActiveRecord
 			array('id', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
+
 			array('id, user, comment, answer, date, rating, approve', 'safe', 'on'=>'search'),
 		);
 	}
@@ -84,6 +85,7 @@ class Comments extends CActiveRecord
 		$criteria->compare('user',$this->user);
 		$criteria->compare('comment',$this->comment);
 		$criteria->compare('date',$this->date);
+		$criteria->compare('answer',$this->answer);
 		$criteria->compare('rating',$this->rating);
 		$criteria->compare('approve',$this->approve);
 

@@ -81,11 +81,12 @@ class CommentsController extends Controller
 		// $this->performAjaxValidation($model);
 		$comments=Comments::getComments($show);
 		$counts=Comments::getCounts();
-		if(isset($_POST['Comments']))
-		{
-			$model->attributes=$_POST['Comments'];
-			if($model->save())
+		if(isset($_POST['Comments'])) {
+			$model->answer = $_POST['Comments']['answer'];
+			$model->approve = $_POST['Comments']['approve'];
+			if($model->save()) {
 				$this->redirect(array('index'));
+			}
 		}
 
 		$this->render('update',array(

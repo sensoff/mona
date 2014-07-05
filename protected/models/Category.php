@@ -161,4 +161,9 @@ class Category extends CActiveRecord
 		$criteria->params[':alias']=$alias;
 		return self::model()->find($criteria);
 	}
+	static public function getMasters(){
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('t.show = 1');
+		return self::model()->findAll($criteria);
+	}
 }

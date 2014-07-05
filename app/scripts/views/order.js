@@ -18,17 +18,10 @@ define([
         <input class="phone" type="text" name="phone" value="" placeholder="1234567" />\
         <div class="errors" data-phone-error></div>\
       </div>\
-      <div data-similar>\
+      <div data-similar >\
         <% if (options) { %>\
-        <div class="line">\
-          <div class="similar">\
-            Я хочу заказать похожее \
-            <div class="similar-image">\
-              <img src="images/gallery/<%= options.img %>" />\
-              <div class="price">~ <%= options.price %> $</div>\
-            </div>\
-          </div>\
-        </div>\
+        <input type="hidden" name="img" value="<%= options.img %>" />\
+        <input type="hidden" name="price" value="<%= options.price %>" />\
         <% } %>\
       </div>\
       <div class="buttons">\
@@ -39,15 +32,8 @@ define([
   ';
 
   var similar_template = '\
-      <div class="line">\
-          <div class="similar">\
-              Я хочу заказать похожее \
-              <div class="similar-image">\
-                <img src="images/gallery/<%= options.img %>" />\
-                <div class="price">~ <%= options.price %> $</div>\
-              </div>\
-          </div>\
-      </div>\
+      <input type="hidden" name="img" value="<%= options.img %>" />\
+      <input type="hidden" name="price" value="<%= options.price %>" />\
   ';
 
   var OrderView = Backbone.View.extend({

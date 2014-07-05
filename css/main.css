@@ -147,14 +147,13 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  background: #e1fcde;
   border: none;
   outline: none;
 }
 
 input[type="text"].error {
-  background: #f7782a;
-  color: #FFFFFF;
+  outline: 2px solid #f7782a;
+  color: #f7782a;
 }
 
 textarea {
@@ -176,14 +175,13 @@ textarea {
 }
 
 textarea:focus {
-  background: #e1fcde;
   border: none;
   outline: none;
 }
 
 textarea.error {
-  background: #f7782a;
-  color: #FFFFFF;
+  outline: 2px solid #f7782a;
+  color: #f7782a;
 }
 
 button {
@@ -1346,7 +1344,11 @@ header {
 }
 
 .b-modal .m .m_m .m_m_m .m_m_m_body {
+  background: rgba(0, 0, 0, 0.2);
   display: inline-block;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .b-order-form {
@@ -1367,7 +1369,7 @@ header {
   float: left;
   line-height: 40px;
   margin-bottom: 10px;
-  width: 360px;
+  width: 460px;
 }
 
 .b-order-form .line .label {
@@ -1382,12 +1384,12 @@ header {
 
 .b-order-form .line input.name {
   float: right;
-  width: 270px;
+  width: 370px;
 }
 
 .b-order-form .line input.phone {
   float: right;
-  width: 100px;
+  width: 200px;
 }
 
 .b-order-form .line .errors {
@@ -1895,7 +1897,7 @@ header {
   z-index: 12;
 }
 
-.b-slider .fotorama__stage:hover .fotorama__caption {
+.b-slider .fotorama:hover .fotorama__caption {
   opacity: 1;
 }
 
@@ -2227,7 +2229,11 @@ header {
   display: none;
 }
 
-.e-comment {
+.e-one-comment {
+  margin-bottom: 10px;
+}
+
+.e-one-comment .e-comment {
   background: #4fbf42;
   color: #FFFFFF;
   font-family: 'AFuturicaBook', sans-serif;
@@ -2235,27 +2241,70 @@ header {
   padding: 10px 20px 15px 20px;
 }
 
-.e-comment article {
+.e-one-comment .e-comment article {
   margin-bottom: 20px;
 }
 
-.e-comment .footer .left {
+.e-one-comment .e-comment .footer .left {
   float: left;
   font-family: 'AFuturicaLtSemiBold', sans-serif;
   font-size: 14px;
 }
 
-.e-comment .footer .right {
+.e-one-comment .e-comment .footer .right {
   float: right;
 }
 
-.e-comment .footer:before,
-.e-comment .footer:after {
+.e-one-comment .e-comment .footer:before,
+.e-one-comment .e-comment .footer:after {
   content: " ";
   display: table;
 }
 
-.e-comment .footer:after {
+.e-one-comment .e-comment .footer:after {
+  clear: both;
+}
+
+.e-one-comment .e-comment-answer {
+  background: url(../images/answer-arrow.png) no-repeat;
+  background-position: left center;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.e-one-comment .e-comment-answer .e-comment-body {
+  background: #79DD77;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-family: 'AFuturicaBook', sans-serif;
+  font-size: 18px;
+  padding: 10px 20px 15px 20px;
+  width: 930px;
+}
+
+.e-one-comment .e-comment-answer .e-comment-body article {
+  margin-bottom: 20px;
+}
+
+.e-one-comment .e-comment-answer .e-comment-body .footer .left {
+  float: left;
+  font-family: 'AFuturicaLtSemiBold', sans-serif;
+  font-size: 14px;
+}
+
+.e-one-comment .e-comment-answer .e-comment-body .footer .right {
+  float: right;
+}
+
+.e-one-comment .e-comment-answer .e-comment-body .footer:before,
+.e-one-comment .e-comment-answer .e-comment-body .footer:after {
+  content: " ";
+  display: table;
+}
+
+.e-one-comment .e-comment-answer .e-comment-body .footer:after {
   clear: both;
 }
 
@@ -2263,6 +2312,8 @@ header {
   color: #4fbf42;
   font-family: 'AFuturicaLtThin', sans-serif;
   font-size: 24px;
+  margin: 0 auto;
+  padding-top: 20px;
   width: 700px;
   text-align: left;
 }
@@ -2383,6 +2434,7 @@ header {
 
 .e-gallery {
   color: #4fbf42;
+  margin: 0 auto;
   text-align: left;
   width: 960px;
 }

@@ -194,4 +194,14 @@ class Product extends CActiveRecord
 		$criteria->params[':cid']=$master;
 		return self::model()->count($criteria);
 	}
+
+	static public function getProducts5($master = null) {
+		$criteria = new CDbCriteria();
+
+		if(isset($master)){
+			$criteria->addCondition("category_id = :master");
+			$criteria->params[':master']=$master;
+		}
+		return self::model()->with('cat')->findAll($criteria);
+	}
 }

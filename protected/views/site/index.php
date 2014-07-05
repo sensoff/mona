@@ -18,27 +18,25 @@
 </section>
 
 <section id="main-news">
-  <?php
-    echo $news->id;
-  ?>
-  <div class="b-main-news">
-    <div class="left">
-      <?php
-        list($y, $m, $d) = split('[/.-]', $news->create_date);
-        echo $d.'.'.$m;
-      ?>
+  <div data-first-news class="b-main-news">
+    <div class="b-one-news" data-first-news>
+      <div class="left">
+        <?php
+          list($y, $m, $d) = split('[/.-]', $news->create_date);
+          echo $d.'.'.$m;
+        ?>
+      </div>
+      <div class="right">
+        <div class="close"></div>
+        <article>
+          <?php echo $news->main_text_lang1; ?>
+        </article>
+        <a data-next-news href="#news/1" class="all-news">
+          Читать следующую новость
+        </a>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="right">
-      <div class="close"></div>
-      <article>
-        <?php echo $news->main_text_lang1; ?>
-      </article>
-      <a data-all-news href="#news/1" class="all-news">
-        Читать все новости
-      </a>
-      <a data-clear-news href="#">Скрыть новости</a>
-    </div>
-  <div class="clearfix"></div>
   </div>
 </section>
 
@@ -111,32 +109,49 @@
       </menu>
     </div>
     <div class="comments">
-      <div class="e-comment">
-        <article>
-          <?php echo $comment->comment?>
-        </article>
-        <div class="footer">
-          <div class="left">
-            <?php
-              list($y, $m, $d) = split('[/.-]', $comment->date);
-              echo $comment->user.', ';
-              echo $d.'.'.$m.'.'.$y;
-            ?>
-          </div>
-          <div class="right">
-            <?php
-              if(isset($comment)) {
-                for($j=1; $j<= $comment->rating; $j++) { ?>
-                  <img src="<?php echo Yii::app()->baseUrl ?>/images/star-on2.png"/>
-                <?php } ?>
-                <?php for(; $j< 6; $j++) { ?>
-                  <img src="<?php echo Yii::app()->baseUrl ?>/images/star-off2.png"/>
-                <?php }
-              }
-            ?>
+      <div class="e-one-comment">
+        <div class="e-comment">
+          <article>
+            <?php echo $comment->comment?>
+          </article>
+          <div class="footer">
+            <div class="left">
+              <?php
+                list($y, $m, $d) = split('[/.-]', $comment->date);
+                echo $comment->user.', ';
+                echo $d.'.'.$m.'.'.$y;
+              ?>
+            </div>
+            <div class="right">
+              <?php
+                if(isset($comment)) {
+                  for($j=1; $j<= $comment->rating; $j++) { ?>
+                    <img src="<?php echo Yii::app()->baseUrl ?>/images/star-on2.png"/>
+                  <?php } ?>
+                  <?php for(; $j< 6; $j++) { ?>
+                    <img src="<?php echo Yii::app()->baseUrl ?>/images/star-off2.png"/>
+                  <?php }
+                }
+              ?>
+            </div>
           </div>
         </div>
+        <?php if (isset($comment) && count($comment->answer) > 0) { ?>
+        <div class="e-comment-answer">
+          <div class="e-comment-body">
+            <article>
+              <?php echo $comment->answer; ?>
+            </article>
+            <div class="footer">
+              <div class="left">
+                Администрация сайта
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php } ?>
       </div>
     </div>
+    <div data-comments class="comments"></div>
   </div>
 </section>
