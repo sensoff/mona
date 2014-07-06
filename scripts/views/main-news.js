@@ -18,15 +18,6 @@ define([
           opts.model = new Backbone.Model({open: true, read: true});
           opts.app = this.app;
           this.collection_views.push(new OneNewsView(opts));
-          console.log(this.collection_views)
-      },
-
-      toggleShow: function() {
-          console.log(123)
-      },
-
-      closeAllNews: function() {
-
       },
 
       addNews: function() {

@@ -61,7 +61,6 @@ define([
           this.app = options.app;
           this.collection = new ListsCollection;
           this.model.on('change:open', this.toggleOpen, this);
-
       },
 
       render: function(options) {

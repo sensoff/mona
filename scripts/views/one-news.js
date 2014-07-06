@@ -30,13 +30,9 @@ var news_template = '\
                 this.setElement(options.el);
             }
             this.model = options.model;
-            console.log(this.model)
             this.app = options.app;
             this.model.on('change:open', this.toggleOpen, this);
             //this.model.on('change:read', this.toggleRead, this);
-            this.model.on('all:test', this.test, this)
-            console.log(this.model.get('read'))
-            console.log(this.model.set('test', 222))
         },
 
         render: function() {

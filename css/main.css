@@ -2308,6 +2308,19 @@ header {
   clear: both;
 }
 
+.close-comments {
+  display: block;
+  font-family: 'AFuturicaLtSemiBold', sans-serif;
+  font-size: 18px;
+  color: #1bb31b;
+  text-align: center;
+  width: 100%;
+}
+
+.close-comments:hover {
+  text-decoration: none;
+}
+
 .e-comment-form {
   color: #4fbf42;
   font-family: 'AFuturicaLtThin', sans-serif;
